@@ -13,7 +13,7 @@
 
 <body class="corpo">
 
-    <form action="">
+    <form id="idformulario" action="">
         <h1>Cadastro de Usuário</h1>
         <!-- Primeiro container de colunas -->
         <div class="container text-center">
@@ -21,38 +21,50 @@
                 <!-- Inicio coluna de informações pessoais -->
                 <div class="col">
                     <label for="nome_completo">Nome Completo</label>
-                    <input required id="nome_completo" type="text" placeholder="Seu Nome Completo" minlength="5" maxlength="60">
+                    <input class="input_validate" id="nome_completo" type="text" placeholder="Seu Nome Completo" maxlength="50" oninput="validaNomeCompleto()">
+                    <span class="span_mensagem"></span>
 
                     <label for="cpf">CPF</label>
-                    <input required id="cpf" type="text" placeholder="" maxlength="60">
+                    <input class="input_validate" id="cpf" type="text" maxlength="14" placeholder="000.111.222-33" oninput="validaCPF()">
+                    <span class="span_mensagem"></span>
 
                     <label for="senha">Senha</label>
-                    <input required id="senha" type="password" placeholder="Sua Senha" minlength="5" maxlength="15">
+                    <input class="input_validate" id="senha" type="password" placeholder="Sua Senha" maxlength="7" oninput="validaSenha()">
+                    <span class="span_mensagem"></span>
 
                     <label for="confirma_senha">Confirmação de Senha</label>
-                    <input required id="confirma_senha" type="password" placeholder="Confirmar a Senha" minlength="5" maxlength="15">
+                    <input class="input_validate" id="confirma_senha" type="password" placeholder="Confirmar a Senha" maxlength="7" oninput="validaConfirmaSenha()">
+                    <span class="span_mensagem"></span>
 
                     <label for="data_nascimento">Data de Nascimento</label>
-                    <input required id="data_nascimento" type="date">                    
+                    <input id="data_nascimento" type="date">                    
                 </div>
                 <!-- Fim coluna de informações pessoais -->
 
                 <!-- Inicio coluna de contato -->
                 <div class="col">
                     <label for="login">Login</label>
-                    <input required id="login" type="text" placeholder="Seu Login" maxlength="60">
+                    <input class="input_validate" id="login" type="text" placeholder="Seu Nome de Login" maxlength="5" oninput="validaLogin()">
+                    <span class="span_mensagem"></span>
+
 
                     <label for="nome_materno">Nome Materno</label>
-                    <input required id="nome_materno" type="text" placeholder="Nome Materno" maxlength="60">
+                    <input class="input_validate" id="nome_materno" type="text" placeholder="" maxlength="50" oninput="validaNomeMaterno()">
+                    <span class="span_mensagem"></span>
 
                     <label for="telefone_celular">Telefone Celular</label>
-                    <input required id="telefone_celular" type="tel" placeholder="" minlength="" maxlength="">
+                    <input class="input_validate" id="telefone_celular" type="tel" placeholder="+55(00)12222-3333" maxlength="18" oninput="validaTelCelular()">
+                    <span class="span_mensagem"></span>
+
 
                     <label for="telefone_fixo">Telefone Fixo</label>
-                    <input required id="telefone_fixo" type="tel" placeholder="" minlength="" maxlength="">
+                    <input class="input_validate" id="telefone_fixo" type="tel" placeholder="+55(00)25555-4444" maxlength="18" oninput="validaTelFixo()">
+                    <span class="span_mensagem"></span>
 
                     <label for="endereco_completo">Endereço Completo</label>
-                    <input required id="endereco_completo" type="text" placeholder="Seu Endereço" maxlength="100">
+                    <input class="input_validate" id="endereco_completo" type="text" placeholder="Seu Endereço Completo" maxlength="60" oninput="validaEndCompleto()">
+                    <span class="span_mensagem"></span>
+
 
                     <h3 for="">Sexo</h3>
                     <div class="div_sexo">
@@ -74,7 +86,7 @@
                 </div>
                 <div class="col-12">
                     <div class="botoes">
-                        <button id="btn_submit" type="button" class="btn">Enviar</button>
+                        <button id="btn_submit" type="submit" class="btn">Enviar</button>
                         <button id="btn_reset" type="reset" class="btn">Limpar</button>
                     </div>
                 </div>
@@ -86,6 +98,8 @@
         <!-- Fim comentario -->
     </form>
 
+
+    <script src="script.js"></script>
     <!-- Link Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
