@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <!-- Link Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="corpo">
+
+    <form action="">
+        <h1>Cadastro de Usuário</h1>
+        <!-- Primeiro container de colunas -->
+        <div class="container text-center">
+            <div class="row row-cols-2">
+                <!-- Inicio coluna de informações pessoais -->
+                <div class="col">
+                    <label for="nome_completo">Nome Completo</label>
+                    <input required id="nome_completo" type="text" placeholder="Seu Nome Completo" minlength="5" maxlength="60">
+
+                    <label for="cpf">CPF</label>
+                    <input required id="cpf" type="text" placeholder="" maxlength="60">
+
+                    <label for="senha">Senha</label>
+                    <input required id="senha" type="password" placeholder="Sua Senha" minlength="5" maxlength="15">
+
+                    <label for="confirma_senha">Confirmação de Senha</label>
+                    <input required id="confirma_senha" type="password" placeholder="Confirmar a Senha" minlength="5" maxlength="15">
+
+                    <label for="data_nascimento">Data de Nascimento</label>
+                    <input required id="data_nascimento" type="date">                    
+                </div>
+                <!-- Fim coluna de informações pessoais -->
+
+                <!-- Inicio coluna de contato -->
+                <div class="col">
+                    <label for="login">Login</label>
+                    <input required id="login" type="text" placeholder="Seu Login" maxlength="60">
+
+                    <label for="nome_materno">Nome Materno</label>
+                    <input required id="nome_materno" type="text" placeholder="Nome Materno" maxlength="60">
+
+                    <label for="telefone_celular">Telefone Celular</label>
+                    <input required id="telefone_celular" type="tel" placeholder="" minlength="" maxlength="">
+
+                    <label for="telefone_fixo">Telefone Fixo</label>
+                    <input required id="telefone_fixo" type="tel" placeholder="" minlength="" maxlength="">
+
+                    <label for="endereco_completo">Endereço Completo</label>
+                    <input required id="endereco_completo" type="text" placeholder="Seu Endereço" maxlength="100">
+
+                    <h3 for="">Sexo</h3>
+                    <div class="div_sexo">
+                    <label class="label_radio" for="sexo_masculino">Masculino</label>
+                    <input name="sexo" id="sexo_masculino" class="input_radio" type="radio">
+                    <label class="label_radio" for="sexo_feminino">Feminino</label>
+                    <input name="sexo" id="sexo_feminino" class="input_radio" type="radio">
+                    </div>
+                </div>
+                <!-- Fim coluna de contato -->
+        </div>
+
+        <!-- Segundo container de colunas -->
+        <!-- Inicio comentario -->
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <!-- Vazio -->
+                </div>
+                <div class="col-12">
+                    <div class="botoes">
+                        <button id="btn_submit" type="button" class="btn">Enviar</button>
+                        <button id="btn_reset" type="reset" class="btn">Limpar</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- Vazio -->
+                </div>
+            </div>
+        </div>
+        <!-- Fim comentario -->
+    </form>
+
+    <!-- Link Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>

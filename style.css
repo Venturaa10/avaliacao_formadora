@@ -1,0 +1,106 @@
+
+form {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+h3 {
+    width: max-content;
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+
+/* Estiliza Labels */
+label {
+    text-transform: capitalize;
+    font-size: 18px;
+    text-align: left;
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Estiliza inputs */
+input[type="text"],
+input[type="tel"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+/* Colocando o p na mesma linha do label */
+label p {
+    display: inline;
+}
+
+.div_sexo {
+    text-align: left;
+}
+
+.div_sexo label{
+    padding: 10px;
+    display: inline;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Estiliza o tamanho das colunas */
+.col {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Estiliza Botões */
+.botoes {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 10px;
+}
+
+.btn {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 18px;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+#btn_submit {
+    background-color: #30ef00;
+}
+
+#btn_reset {
+    background-color: #ef0800;
+}
